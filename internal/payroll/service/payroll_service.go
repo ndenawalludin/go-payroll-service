@@ -2,9 +2,9 @@ package service
 
 import (
 	"context"
-	"go-payroll-service/cmd/internal/payroll/model/domain"
-	"go-payroll-service/cmd/internal/payroll/model/request"
-	"go-payroll-service/cmd/internal/payroll/repository"
+	"go-payroll-service/internal/payroll/model/domain"
+	"go-payroll-service/internal/payroll/model/request"
+	repository2 "go-payroll-service/internal/payroll/repository"
 	"time"
 )
 
@@ -14,8 +14,8 @@ type PayrollService interface {
 }
 
 type payrollService struct {
-	employeeRepository repository.EmployeeRepository
-	payrollRepository  repository.PayrollRepository
+	employeeRepository repository2.EmployeeRepository
+	payrollRepository  repository2.PayrollRepository
 }
 
 func (s payrollService) GeneratePayroll(ctx context.Context, req request.GeneratePayrollRequest) (int, error) {
@@ -65,7 +65,7 @@ func (s payrollService) ListPayslips(ctx context.Context, periodCode string) ([]
 	return s.payrollRepository.ListPayslipByPeriodCode(ctx, periodCode)
 }
 
-func NewPayrollService(employeeRepository repository.EmployeeRepository, payrollRepository repository.PayrollRepository) PayrollService {
+func NewPayrollService(employeeRepository repository2.EmployeeRepository, payrollRepository repository2.PayrollRepository) PayrollService {
 	return &payrollService{
 		employeeRepository: employeeRepository,
 		payrollRepository:  payrollRepository,

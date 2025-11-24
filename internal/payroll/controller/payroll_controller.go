@@ -2,10 +2,10 @@ package controller
 
 import (
 	"errors"
-	"go-payroll-service/cmd/internal/payroll/model/request"
-	"go-payroll-service/cmd/internal/payroll/model/response"
-	"go-payroll-service/cmd/internal/payroll/service"
-	"go-payroll-service/cmd/internal/payroll/util"
+	"go-payroll-service/internal/payroll/model/request"
+	"go-payroll-service/internal/payroll/model/response"
+	"go-payroll-service/internal/payroll/service"
+	"go-payroll-service/internal/payroll/util"
 	"net/http"
 
 	"github.com/gin-gonic/gin"

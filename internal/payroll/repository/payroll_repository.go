@@ -4,8 +4,8 @@ import (
 	"context"
 	"database/sql"
 	"errors"
-	"go-payroll-service/cmd/internal/payroll/model/domain"
-	"go-payroll-service/cmd/internal/payroll/util"
+	"go-payroll-service/internal/payroll/model/domain"
+	"go-payroll-service/internal/payroll/util"
 	"time"
 )
 

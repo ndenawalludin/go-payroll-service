@@ -2,9 +2,9 @@ package service
 
 import (
 	"context"
-	"go-payroll-service/cmd/internal/payroll/model/domain"
-	"go-payroll-service/cmd/internal/payroll/model/request"
-	"go-payroll-service/cmd/internal/payroll/repository"
+	"go-payroll-service/internal/payroll/model/domain"
+	"go-payroll-service/internal/payroll/model/request"
+	"go-payroll-service/internal/payroll/repository"
 )
 
 type EmployeeService interface {
